@@ -1,35 +1,24 @@
 // Write your code here
 import './index.css'
+import {Component} from 'react'
 
-const MatchCard = props => {
-  const {recentMatchData} = props
-  const {
-    umpires,
-    result,
-    manOftheMatch,
-    id,
-    date,
-    venue,
-    competingTeam,
-    competingTeamLogo,
-    firstInnings,
-    secondInnings,
-    matchStatus,
-  } = recentMatchData
-  console.log(recentMatchData)
-  const matchstatusClass = matchStatus === 'Won' ? 'statuswon' : 'statusLoss'
-  return (
-    <li className="recent-match-card">
-      <img
-        className="imgTeamlogo"
-        src={competingTeamLogo}
-        alt={`competing team ${competingTeam}`}
-      />
-      <p className="CompetingteamHead">{competingTeam}</p>
-      <p className="resultPara">{result}</p>
-      <p className={`${matchstatusClass}`}>{matchStatus}</p>
-    </li>
-  )
+class MatchCard extends Component {
+  render() {
+    const {matchData} = this.props
+    const {result, competingTeam, competingTeamLogo, matchStatus} = matchData
+    return (
+      <li className={`match-card ${matchStatus}`}>
+        <img
+          className="match-card-logo"
+          src={competingTeamLogo}
+          alt={`competing team ${competingTeam}`}
+        />
+        <p className="match-card-name">{competingTeam}</p>
+        <p className="match-card-result">{result}</p>
+        <p className="match-status">{matchStatus}</p>
+      </li>
+    )
+  }
 }
 
 export default MatchCard

@@ -1,37 +1,60 @@
 // Write your code here
 import './index.css'
+import {Component} from 'react'
 
-const LatestMatch = props => {
-  const {latestmatches} = props
-  return (
-    <div className="latestmatchCont">
-      <div className="logoAndLocCont">
-        <div>
-          <p className="competiveTeamHead">{latestmatches.competingTeam}</p>
-          <p className="competiveTeamHead">{latestmatches.date}</p>
-          <p className="venue">{latestmatches.venue}</p>
-          <p className="result">{latestmatches.result}</p>
-        </div>
-        <div>
-          <img
-            className="competiveTeamLogo"
-            src={latestmatches.competingTeamLogo}
-            alt={`latest match ${latestmatches.competingTeam}`}
-          />
+class LatestMatch extends Component {
+  render() {
+    const {latestMatch} = this.props
+    const {
+      competingTeam,
+      competingTeamLogo,
+      date,
+      firstInnings,
+      manOfTheMatch,
+      secondInnings,
+      umpires,
+      venue,
+      result,
+    } = latestMatch
+    return (
+      <div className="latest-match-card-container">
+        <h1 className="latest-match-heading">Latest Match</h1>
+        <div className="latest-match-card">
+          <div className="latest-match-logo-container">
+            <div className="latest-match-details-main">
+              <p className="latest-match-team-name">{competingTeam}</p>
+              <p className="latest-match-date">{date}</p>
+              <p className="latest-match-venue">{venue}</p>
+              <p className="latest-match-status">{result}</p>
+            </div>
+            <img
+              className="latest-match-logo"
+              src={competingTeamLogo}
+              alt={`latest match ${competingTeam}`}
+            />
+          </div>
+          <div className="latest-match-details-info">
+            <div className="match-info-item">
+              <p className="latest-match-details-label">First Innings</p>
+              <p className="latest-match-details-value">{firstInnings}</p>
+            </div>
+            <div className="match-info-item">
+              <p className="latest-match-details-label">Second Innings</p>
+              <p className="latest-match-details-value">{secondInnings}</p>
+            </div>
+            <div className="match-info-item">
+              <p className="latest-match-details-label">Man Of The Match</p>
+              <p className="latest-match-details-value">{manOfTheMatch}</p>
+            </div>
+            <div className="match-info-item">
+              <p className="latest-match-details-label">Umpires</p>
+              <p className="latest-match-details-value">{umpires}</p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="inningsCont">
-        <p className="head">First Innings</p>
-        <p className="desc">{latestmatches.firstInnings}</p>
-        <p className="head">Second Innings</p>
-        <p className="desc">{latestmatches.secondInnings}</p>
-        <p className="head">Man of the Match</p>
-        <p className="desc">{latestmatches.manOftheMatch}</p>
-        <p className="head">Umpires</p>
-        <p className="desc">{latestmatches.umpires}</p>
-      </div>
-    </div>
-  )
+    )
+  }
 }
+
 export default LatestMatch

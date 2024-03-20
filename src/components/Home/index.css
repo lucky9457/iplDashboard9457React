@@ -1,42 +1,71 @@
 /* Write your CSS here */
-* {
-  margin: 0px;
-  padding: 0px;
-}
-.main {
-  background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png');
-  min-height: 100vh;
-  height: 100%;
-  min-width: 100vw;
+.app-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-sm-bg.png');
   background-size: cover;
-  padding-top: 50px;
-  padding: 50px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-@media (width<=576px) {
+
+@media screen and (min-width: 768px) {
+  .app-container {
+    background-image: url('https://assets.ccbp.in/frontend/react-js/ipl-dashboard-lg-bg.png');
+    justify-content: center;
+  }
 }
 
-.image-ipl {
-  height: 70px;
-  margin-right: 10px;
-}
-.ipl-head-cont {
+.ipl-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 90%;
 }
-.iplheading {
-  font-size: 40px;
-  font-family: Bree Serif;
-  color: white;
+
+@media screen and (min-width: 768px) {
+  .ipl-container {
+    padding: 30px;
+  }
 }
-.cardsCont {
+
+.header-container {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ipl-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+@media screen and (min-width: 768px) {
+  .ipl-logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.header-heading {
+  color: #ffffff;
+  font-size: 35px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .header-heading {
+    font-size: 40px;
+  }
+}
+
+.team-list-items {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 20px;
-  padding-left: 0px;
+  list-style: none;
+  width: 100%;
 }
