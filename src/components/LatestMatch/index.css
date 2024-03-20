@@ -1,0 +1,86 @@
+/* Write your CSS here */
+.latestmatchCont {
+  background-color: #1e293b;
+  padding: 40px;
+  font-family: Bree Serif;
+  color: white;
+  height: 40vh;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media (width<=768px) {
+  .latestmatchCont {
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px;
+  }
+}
+.competiveTeamHead {
+  font-family: Bree Serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.venue {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.result {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.competiveTeamLogo {
+  height: 150px;
+}
+
+.inningsCont {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.head {
+  font-size: 20px;
+}
+.desc {
+  font-size: 15px;
+}
+.logoAndLocCont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
+@media (width<=576px) {
+  .competiveTeamLogo {
+    height: 90px;
+  }
+  .logoAndLocCont {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  .head {
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+  .desc {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  .competiveTeamHead {
+    font-size: 15px;
+  }
+  .result {
+    font-size: 12px;
+  }
+  .venue {
+    font-size: 12px;
+  }
+}

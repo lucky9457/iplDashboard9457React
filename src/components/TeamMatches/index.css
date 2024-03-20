@@ -1,0 +1,29 @@
+/* Write your CSS here */
+.detailedSectionMain {
+  background-image: linear-gradient(to bottom, red, black);
+  min-height: 100vh;
+  height: 100%;
+  color: white;
+  padding: 15px;
+}
+.imageurlBanner {
+  width: 100%;
+}
+.latest-match {
+  font-family: Bree serif;
+  font-size: 20px;
+  color: white;
+}
+.recentmatchCont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, red, black);
+  min-height: 100vh;
+  height: 100%;
+}

@@ -1,0 +1,53 @@
+/* Write your CSS here */
+.recent-match-card {
+  font-family: Bree serif;
+  color: white;
+  background-color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 20px;
+  align-items: center;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.statuswon {
+  color: green;
+  margin-bottom: 20px;
+}
+.statusLoss {
+  color: red;
+  margin-bottom: 20px;
+}
+.imgTeamlogo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+.resultPara {
+  font-size: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.CompetingteamHead {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media (width<=768px) {
+  .CompetingteamHead {
+    font-size: 12px;
+  }
+  .imgTeamlogo {
+    width: 40px;
+  }
+  .resultPara {
+    font-size: 9px;
+  }
+  .recent-match-card {
+    height: 300px;
+  }
+}
